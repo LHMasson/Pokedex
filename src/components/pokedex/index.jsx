@@ -1,6 +1,6 @@
 import React from 'react';
 import * as PokeDX from 'pokeapi-js-wrapper';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Pokedex = () => {
     const P = new PokeDX.Pokedex();
@@ -12,6 +12,7 @@ const Pokedex = () => {
     const getPokemon = async () => {
         const pokemon = await P.getPokemonByName(search);
         console.log(pokemon);
+        setSpriteFace('');
         setPokemon(pokemon);
     }
 
