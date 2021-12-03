@@ -16,7 +16,7 @@ function App() {
   },[]) 
 
   const getGolduck = async () => {
-    const golduck = await P.getPokemonByName('golduck')
+    const golduck = await P.getPokemonByName('mewtwo')
     console.log(golduck)
     return golduck
   }
